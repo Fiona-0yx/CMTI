@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="支付演示二维码">
+  <rect width="220" height="220" rx="8" fill="#fff"/>
+  <g fill="#5b3a49">
+    <path d="M14 14h58v58H14zM23 23v40h40V23zM35 35h16v16H35z"/>
+    <path d="M148 14h58v58h-58zM157 23v40h40V23zM169 35h16v16h-16z"/>
+    <path d="M14 148h58v58H14zM23 157v40h40v-40zM35 169h16v16H35z"/>
+    <path d="M88 14h10v10H88zM108 14h10v20h-10zM78 34h20v10H78zM118 38h10v18h-10zM88 54h20v10H88zM78 74h10v18H78zM98 74h10v10H98zM118 68h20v10h-20z"/>
+    <path d="M78 102h12v12H78zM98 96h10v28H98zM118 96h22v10h-22zM148 88h10v20h-10zM168 88h10v10h-10zM188 88h18v12h-18z"/>
+    <path d="M78 128h20v10H78zM108 128h10v20h-10zM128 120h10v18h-10zM148 118h20v12h-20zM178 112h10v26h-10zM198 118h8v10h-8z"/>
+    <path d="M78 152h10v18H78zM98 152h22v10H98zM128 148h10v28h-10zM148 148h10v10h-10zM168 148h28v10h-28zM88 178h20v10H88zM118 184h10v22h-10zM138 180h20v10h-20zM168 174h10v32h-10zM188 186h18v10h-18z"/>
+  </g>
+  <path d="M110 106h4v4h-4zM116 112h4v4h-4z" fill="#d85f8d"/>
+  <text x="110" y="218" text-anchor="middle" fill="#b54872" font-family="Arial,sans-serif" font-size="7" letter-spacing="1">DEMO ONLY</text>
+</svg>

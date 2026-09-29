@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: cmti
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: COZE_API_TOKEN
+        sync: false
+      - key: COZE_BOT_ID
+        sync: false
+      - key: COZE_API_BASE
+        value: https://api.coze.cn
+      - key: CMTI_ADMIN_PASSWORD
+        sync: false

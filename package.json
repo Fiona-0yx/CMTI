@@ -1,0 +1,13 @@
+{
+  "name": "cmti-competition-personality",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CMTI competition personality test and guidance service",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

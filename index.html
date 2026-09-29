@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f5">
+  <meta name="description" content="CMTI 竞赛人格探索：发现你的竞赛偏好与适合的参赛方向。">
+  <title>CMTI · 发现你的竞赛主场</title>
+  <link rel="stylesheet" href="/styles.css?v=20260924-unlock">
+  <link rel="stylesheet" href="/overrides.css?v=20260924-unlock">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="CMTI 首页">
+        <span class="brand-mark">C</span>
+        <span><strong>CMTI</strong><small>竞赛人格探索</small></span>
+      </a>
+      <div class="topbar-right">
+        <span class="privacy-chip"><span class="status-dot"></span>你的答案仅用于竞赛方向分析</span>
+        <a class="admin-link" href="/admin">管理入口</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="welcome-view" id="welcomeView">
+        <div class="welcome-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span>COMPETITION MINDSET TYPE INDICATOR</div>
+          <h1>找到你的<br><span>竞赛主场。</span></h1>
+          <p class="welcome-lede">从算法到硬件，从灵感到研究。用一组关于偏好的问题，看看哪种竞赛方式最能让你投入。</p>
+          <div class="welcome-facts"><span>24 道倾向题</span><i></i><span>约 5 分钟</span><i></i><span>6 个探索维度</span></div>
+          <div class="welcome-art" aria-hidden="true">
+            <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+            <div class="art-center"><span>CM</span><small>IDEAS<br>IN ACTION</small></div>
+            <div class="art-node node-a">&lt;/&gt;</div><div class="art-node node-b">✳</div><div class="art-node node-c">⌘</div><div class="art-node node-d">∑</div>
+          </div>
+        </div>
+        <form class="entry-panel" id="entryForm">
+          <div class="panel-index">01 <span>/ 03</span></div>
+          <h2>先认识一下你</h2>
+          <p class="panel-intro">填写基本信息后开始探索。姓名和专业会随测试结果提交给本校 CMTI 管理员。</p>
+          <label class="field-label" for="studentName">姓名</label>
+          <input id="studentName" name="name" autocomplete="name" maxlength="60" placeholder="怎么称呼你？" required>
+          <label class="field-label" for="studentMajor">专业</label>
+          <input id="studentMajor" name="major" maxlength="80" placeholder="例如：软件工程" required>
+          <div class="consent-row">
+            <input id="privacyConsent" type="checkbox" required>
+            <label for="privacyConsent">我已阅读并同意<a href="#privacyDialog" id="openPrivacy">隐私说明</a>，同意将姓名、专业及答题结果用于竞赛方向分析和校内统计。</label>
+          </div>
+          <button class="button button-primary button-wide" type="submit">开始测试 <span aria-hidden="true">→</span></button>
+          <p class="micro-note">这是一项竞赛兴趣探索工具，不是心理诊断或经验证的人格测验。</p>
+        </form>
+      </section>
+
+      <section class="quiz-view hidden" id="quizView">
+        <div class="quiz-topline">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span>YOUR CMTI JOURNEY</div><h1 id="quizHeading">倾向问卷</h1></div>
+          <button class="text-button" id="exitQuiz" type="button">退出测试</button>
+        </div>
+        <div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-meta"><span id="progressText">第 1 组，共 6 组</span><span id="answeredText">0 / 24 已回答</span></div></div>
+        <div class="quiz-intro"><span class="mini-spark">✳</span><p>请按照你<strong>平时真实的感受</strong>作答，而不是理想中的自己。没有正确答案。</p></div>
+        <div id="questionList" class="question-list"></div>
+        <div class="quiz-actions"><button class="button button-quiet" id="prevStep" type="button">← 上一组</button><span class="step-dots" id="stepDots" aria-label="问卷进度"></span><button class="button button-primary" id="nextStep" type="button">下一组 <span>→</span></button></div>
+      </section>
+
+      <section class="result-view hidden" id="resultView">
+        <div class="result-head"><div><div class="eyebrow"><span class="eyebrow-line"></span>YOUR CMTI PROFILE</div><h1>你的竞赛人格</h1></div><div class="result-head-actions"><span class="free-badge">基础结果 · 免费</span><button class="button button-outline" id="retakeTest" type="button">重新测试</button></div></div>
+        <div id="resultContent"></div>
+        <p class="disclaimer">结果反映你本次自我报告的兴趣倾向，仅供探索和选赛参考；不代表能力上限，也不是经过心理学验证的 MBTI 测验。</p>
+      </section>
+
+      <section class="module-view hidden" id="assistantView">
+        <div class="module-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>YOUR COMPETITION GUIDE</div><h1>0y!x 竞赛问答助手</h1><p>结合你的 CMTI 结果，聊聊选赛、组队与准备方向。</p></div><span class="module-badge">AI 助手 · 锁定</span></div>
+        <div class="locked-feature assistant-paywall" aria-label="竞赛问答助手为付费功能">
+          <div class="locked-content" aria-hidden="true" inert>
+          <div class="assistant-layout">
+          <aside class="assistant-context"><span class="context-icon">✳</span><h2>对话背景</h2><p id="assistantContext">完成 CMTI 测试后，你的维度偏好会作为本次对话背景。</p><div class="context-rule"></div><span class="field-label">可以聊聊</span><div class="prompt-chips"><button type="button" data-prompt="根据我的结果，帮我选一个适合入门的竞赛。">我适合从哪项竞赛开始？</button><button type="button" data-prompt="我该怎么准备接下来一个月的竞赛？">帮我安排一个月备赛计划</button><button type="button" data-prompt="我适合找什么样的队友？">我适合找什么样的队友？</button></div></aside>
+          <div class="chat-panel"><div class="chat-messages" id="chatMessages"><div class="chat-welcome"><div class="assistant-avatar">C</div><div><strong>你好，我是 CMTI 竞赛助手</strong><p>可以从你的兴趣维度出发，一起梳理竞赛选择和准备计划。</p></div></div></div><form class="chat-compose" id="chatForm"><textarea id="chatInput" rows="1" maxlength="1200" placeholder="写下你想了解的问题…" aria-label="输入问题"></textarea><button class="send-button" type="submit" aria-label="发送问题" title="发送">↑</button></form><div class="chat-footnote" id="chatStatus">连接学校配置的 AI 服务；未配置时可查看演示回复。</div></div>
+          </div>
+          </div>
+          <div class="locked-overlay"><span class="lock-icon" aria-hidden="true"></span><strong>解锁“0y!x”竞赛问答</strong><span>让 AI 结合你的结果，继续聊选赛和备赛计划</span><button class="button button-primary" type="button" data-unlock>立即解锁</button></div>
+        </div>
+      </section>
+
+      <section class="module-view hidden" id="directoryView">
+        <div class="module-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>THE CMTI TYPES</div><h1>六种竞赛人格</h1><p>不是标签，而是六种投入项目的方式。</p></div><span class="module-badge">完整版 · 锁定</span></div>
+        <div class="locked-feature directory-paywall" aria-label="人格图鉴完整版为付费功能">
+          <div class="locked-content" aria-hidden="true" inert><div id="typeGrid" class="type-grid"></div></div>
+          <div class="locked-overlay"><span class="lock-icon" aria-hidden="true"></span><strong>解锁完整人格图鉴</strong><span>查看六种人格的深度画像、成长路径与赛事策略</span><button class="button button-primary" type="button" data-unlock>立即解锁</button></div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="主要模块">
+      <button class="nav-item active" data-view="result" type="button"><span class="nav-icon">◌</span><span>我的测试</span></button>
+      <button class="nav-item" data-view="assistant" type="button"><span class="nav-icon">✳</span><span>竞赛问答</span></button>
+      <button class="nav-item" data-view="directory" type="button"><span class="nav-icon">▦</span><span>人格图鉴</span></button>
+    </nav>
+    <footer class="site-footer"><span>© CMTI · 竞赛人格探索</span><span>探索兴趣，不给自己设限</span></footer>
+  </div>
+
+  <dialog id="easterEggDialog" class="easter-egg-dialog" aria-labelledby="easterEggTitle">
+    <article class="easter-letter">
+      <button class="easter-close" type="button" data-easter-close aria-label="关闭彩蛋">×</button>
+      <div class="easter-seal" aria-hidden="true">✦</div>
+      <div class="easter-kicker">A LITTLE LETTER FOR YOU</div>
+      <h2 id="easterEggTitle">给武暄的一封信</h2>
+      <div class="easter-rule" aria-hidden="true"></div>
+      <p class="easter-copy">哈喽哥!我是0y!x。这就是小彩蛋,有没有惊喜到你啊。这个网页的成功制作首先就是要感谢您,谢谢您在一面中把我招进来,还夸奖我,陪伴我,为我提供情感支持,如果没有这个契机,我是永远也无法做到这个地步的。在今后的日子里,如果社长能不计前嫌让我进入社团,我一定好好报答您,认真学习,不断进步。祝哥天天开心,生活顺利!</p>
+      <p class="easter-sign">0y!x</p>
+      <button class="easter-enter" type="button" data-easter-close>收下这份心意，进入 CMTI <span aria-hidden="true">→</span></button>
+    </article>
+  </dialog>
+  <dialog id="privacyDialog" class="privacy-dialog"><form method="dialog"><button class="dialog-close" aria-label="关闭">×</button><span class="eyebrow"><span class="eyebrow-line"></span>PRIVACY</span><h2>隐私说明</h2><p>提交后，姓名、专业、24 道答题和综合题选择会保存在本网站所属学校的应用服务器，用于生成个性化结果、校内竞赛方向统计及管理员查看。测试结果也会保存在当前浏览器，以便刷新后查看；共享设备上请注意保护个人信息。信息不会展示给其他学生，也不会用于广告。</p><p>AI 助手仅在你主动发送消息时，会收到该条消息以及你的专业和测试维度摘要；姓名不会发送给 AI 服务。管理员应按学校的数据管理要求控制访问，并在不再需要时删除记录。</p><p>你可以不参加测试。若提交后希望查询或删除记录，请联系学校 CMTI 管理员。</p><button class="button button-primary" type="submit">我知道了</button></form></dialog>
+  <dialog id="paywallDialog" class="paywall-dialog" aria-labelledby="paywallTitle">
+    <article class="paywall-modal">
+      <button class="dialog-close" type="button" data-paywall-close aria-label="关闭支付演示">×</button>
+      <span class="paywall-kicker">CMTI FULL REPORT</span>
+      <h2 id="paywallTitle">扫码支付 <strong>¥9.9</strong><br>解锁完整版</h2>
+      <p class="paywall-subtitle">解锁六维深度分析、AI 竞赛问答和人格图鉴详情</p>
+      <img class="demo-qr" src="/assets/demo-payment-qr.svg" alt="支付演示二维码，占位图片">
+      <p class="paywall-note">该功能为产品演示，关闭弹窗即可体验完整版</p>
+      <button class="paywall-return" type="button" data-paywall-close>返回网页</button>
+    </article>
+  </dialog>
+  <script src="/contest-weights.js?v=20260924-unlock" defer></script>
+  <script src="/app.js?v=20260924-unlock" defer></script>
+</body>
+</html>

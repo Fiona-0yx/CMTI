@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">CMTI 竞赛人格图鉴</title>
+  <desc id="desc">六种竞赛人格的原创彩色徽章插画：限时开挂型、需求终结者、路演气氛组长、赛博锁匠、焊点炼金师、论文炼丹师。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#233049" flood-opacity=".10"/></filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F8FBFF"/><stop offset="1" stop-color="#F2F6F6"/></linearGradient>
+    <style>
+      text{font-family:'Microsoft YaHei','PingFang SC',sans-serif;fill:#182238}
+      .label{font-size:28px;font-weight:700}.sub{font-size:16px;fill:#647084;letter-spacing:1px}.outline{stroke:#182238;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+  <circle cx="1460" cy="100" r="100" fill="#E3F2EF"/><circle cx="100" cy="1020" r="135" fill="#FFF0D8"/>
+  <text x="800" y="102" text-anchor="middle" font-size="58" font-weight="900" letter-spacing="7">CMTI</text>
+  <text x="800" y="145" text-anchor="middle" font-size="20" fill="#697587">竞赛人格图鉴</text>
+  <path d="M620 169h360" stroke="#D7DFE6" stroke-width="2"/>
+
+  <!-- Card 1: algorithm -->
+  <g transform="translate(110 215)" filter="url(#shadow)">
+    <rect width="430" height="365" rx="24" fill="#FFFFFF"/>
+    <circle cx="215" cy="147" r="102" fill="#E5F6F3"/>
+    <path d="M167 109l-34 38 34 38M263 109l34 38-34 38" fill="none" class="outline"/>
+    <path d="M222 85l-34 68h31l-10 56 48-79h-34l18-45z" fill="#FFB02E" class="outline"/>
+    <circle cx="140" cy="91" r="7" fill="#24A995"/><circle cx="291" cy="210" r="8" fill="#24A995"/>
+    <text class="label" x="215" y="300" text-anchor="middle">限时开挂型</text><text class="sub" x="215" y="330" text-anchor="middle">算法竞技 · 速度解题</text>
+  </g>
+
+  <!-- Card 2: engineering -->
+  <g transform="translate(585 215)" filter="url(#shadow)">
+    <rect width="430" height="365" rx="24" fill="#FFFFFF"/>
+    <circle cx="215" cy="147" r="102" fill="#E9EFFB"/>
+    <rect x="139" y="102" width="152" height="101" rx="12" fill="#FFFFFF" class="outline"/>
+    <path d="M158 124h37M158 145h89M158 166h65" stroke="#6383D8" stroke-width="9" stroke-linecap="round"/>
+    <path d="M215 84v20M215 203v20M123 152h16M291 152h16M148 85l14 17M268 203l14 17M282 85l-14 17M162 203l-14 17" stroke="#F39B45" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="215" cy="152" r="23" fill="#F5B657" class="outline"/>
+    <text class="label" x="215" y="300" text-anchor="middle">需求终结者</text><text class="sub" x="215" y="330" text-anchor="middle">工程开发 · 把想法做出来</text>
+  </g>
+
+  <!-- Card 3: innovation -->
+  <g transform="translate(1060 215)" filter="url(#shadow)">
+    <rect width="430" height="365" rx="24" fill="#FFFFFF"/>
+    <circle cx="215" cy="147" r="102" fill="#FFF0E7"/>
+    <path d="M178 168c-22-18-27-49-9-73 21-28 67-27 87 1 17 24 10 55-12 73-9 7-13 16-13 28h-40c0-12-4-21-13-29z" fill="#FFD15C" class="outline"/>
+    <path d="M193 211h45M199 226h33" stroke="#182238" stroke-width="8" stroke-linecap="round"/>
+    <path d="M215 112v24M185 133l18 13M245 133l-18 13" stroke="#F27A56" stroke-width="8" stroke-linecap="round"/>
+    <path d="M151 104l-15-10M279 104l15-10M215 65V50" stroke="#F27A56" stroke-width="8" stroke-linecap="round"/>
+    <text class="label" x="215" y="300" text-anchor="middle">路演气氛组长</text><text class="sub" x="215" y="330" text-anchor="middle">创新创业 · 灵感与表达</text>
+  </g>
+
+  <!-- Card 4: security -->
+  <g transform="translate(110 625)" filter="url(#shadow)">
+    <rect width="430" height="365" rx="24" fill="#FFFFFF"/>
+    <circle cx="215" cy="147" r="102" fill="#FCE9EC"/>
+    <path d="M215 76l72 28v48c0 45-29 76-72 96-43-20-72-51-72-96v-48z" fill="#EF737B" class="outline"/>
+    <circle cx="211" cy="145" r="30" fill="#FFFFFF" class="outline"/>
+    <path d="M233 168l31 31M202 145h18M211 136v18" stroke="#182238" stroke-width="10" stroke-linecap="round"/>
+    <path d="M164 104l13 8M266 104l-13 8" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+    <text class="label" x="215" y="300" text-anchor="middle">赛博锁匠</text><text class="sub" x="215" y="330" text-anchor="middle">安全攻防 · 逆向寻隙</text>
+  </g>
+
+  <!-- Card 5: hardware -->
+  <g transform="translate(585 625)" filter="url(#shadow)">
+    <rect width="430" height="365" rx="24" fill="#FFFFFF"/>
+    <circle cx="215" cy="147" r="102" fill="#FFF2D9"/>
+    <rect x="164" y="108" width="102" height="90" rx="12" fill="#57B9A8" class="outline"/>
+    <path d="M184 128h62v50h-62z" fill="#DDF6EE" stroke="#182238" stroke-width="6"/>
+    <path d="M184 91v17M215 91v17M246 91v17M184 198v17M215 198v17M246 198v17M146 125h18M146 153h18M146 181h18M266 125h18M266 153h18M266 181h18" stroke="#182238" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="200" cy="143" r="6" fill="#F0A34A"/><circle cx="231" cy="164" r="6" fill="#F0A34A"/>
+    <text class="label" x="215" y="300" text-anchor="middle">焊点炼金师</text><text class="sub" x="215" y="330" text-anchor="middle">硬件极客 · 电路与创造</text>
+  </g>
+
+  <!-- Card 6: research -->
+  <g transform="translate(1060 625)" filter="url(#shadow)">
+    <rect width="430" height="365" rx="24" fill="#FFFFFF"/>
+    <circle cx="215" cy="147" r="102" fill="#EEEAFB"/>
+    <path d="M195 93h41M205 95v46l-43 67c-8 13 1 28 16 28h75c15 0 24-15 16-28l-43-67V95" fill="#FFFFFF" class="outline"/>
+    <path d="M185 183c18-13 31 12 48 0 14-10 22-7 34 1l17 25c6 10 0 19-12 19h-91c-13 0-19-10-11-21z" fill="#9B86DC" stroke="#182238" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M202 166l9-12 10 12 11-19 10 17" fill="none" stroke="#F4B944" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="170" cy="99" r="7" fill="#F0A34A"/><circle cx="265" cy="91" r="6" fill="#59B9A8"/>
+    <text class="label" x="215" y="300" text-anchor="middle">论文炼丹师</text><text class="sub" x="215" y="330" text-anchor="middle">建模研究 · 数据与洞察</text>
+  </g>
+  <text x="800" y="1050" text-anchor="middle" font-size="15" fill="#8590A0">CMTI · 找到你的竞赛主场</text>
+</svg>
